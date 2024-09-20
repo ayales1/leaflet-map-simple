@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map Simple</title>
+    
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <!-- Link to your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Leaflet Map Example</h1>
+    <p>A simple interactive map using Leaflet.js</p>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script>
+        // Initialize the map and set its view to a specific location
+        var map = L.map('map').setView([51.505, -0.09], 13);  // Example: London
+
+        // Add a tile layer (this is the visual map layer)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker to the map at the same location
+        var marker = L.marker([51.505, -0.09]).addTo(map)
+            .bindPopup('A pretty popup.<br> Easily customizable.')
+            .openPopup();
+    </script>
+</body>
+</html>
+
 
