@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #007bff;
+}
+
+p {
+    color: #555;
+}
+
+/* Map Container */
+#map {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+}
